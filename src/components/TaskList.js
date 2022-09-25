@@ -1,9 +1,11 @@
 import React from "react";
+import Task from "./Task"
 
-function TaskList() {
+function TaskList({ Tasks, filter, onTaskFormSubmit }) {
+  
   return (
     <div className="tasks">
-      {/* display a list of tasks using Task component */}
+        <Task tasks={Tasks} filter={filter} onTaskFormSubmit={onTaskFormSubmit} />
     </div>
   );
 }
